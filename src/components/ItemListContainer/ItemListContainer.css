@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor para las tarjetas de productos */
+.card-container {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f4f4f4; /* Un gris claro para contraste */
+}
