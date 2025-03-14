@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Item.css';
 
-function Item({ nombre, precio }) {
+function Item({ id, nombre, precio }) {
+  
   function comprar() {
     console.log("Vas a agregar al carrito el cuadro:", nombre);
   }
@@ -10,21 +12,32 @@ function Item({ nombre, precio }) {
     <div className="card">
       <h2 className="Ctitle">{nombre}</h2>
       <h3 className="Ctext">{precio}</h3>
+      
+      {}
       <button className="btn" onClick={comprar}>
         Comprar
       </button>
+
+      {}
+      <Link to={`/item/${id}`} className="btn">
+        Ver detalle
+      </Link>
     </div>
   );
 }
 
 Item.propTypes = {
-  // 'nombre' debe ser string, es requerido
+  
+  id: PropTypes.number.isRequired,
+
+  
   nombre: PropTypes.string.isRequired,
-  // 'precio' puede ser string o número, también es requerido
+
+  
   precio: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
-  ]).isRequired
+  ]).isRequired,
 };
 
 export default Item;
