@@ -25,13 +25,13 @@ function Item({ id, nombre, precio, image }) {
 }
 
 Item.propTypes = {
-  id: PropTypes.any,           // si no usas id local, puedes ponerlo como .any
+  id: PropTypes.any,           
   nombre: PropTypes.string.isRequired,
   precio: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
   ]).isRequired,
-  image: PropTypes.string,     // Se espera que sea un string con la URL
+  image: PropTypes.string,     
 };
 
 export default Item;

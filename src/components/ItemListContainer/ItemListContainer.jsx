@@ -52,8 +52,8 @@ function ItemListContainer() {
       <div className="card-container">
         {items.map((item) => (
           <Item
-            key={item.id}           // Se utiliza el id de Firestore para la key
-            id={item.id}             // Se pasa el id para que /item/:itemId funcione
+            key={item.id}           
+            id={item.id}             
             nombre={item.nombre}
             precio={item.precio}
             image={item.image}

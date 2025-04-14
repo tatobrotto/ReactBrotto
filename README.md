@@ -12,8 +12,6 @@
 
 ![](./logo.png)
 
-![Stars](https://img.shields.io/github/stars/tu-usuario/tu-repo.svg) ![Forks](https://img.shields.io/github/forks/tu-usuario/tu-repo.svg) ![Issues](https://img.shields.io/github/issues/tu-usuario/tu-repo.svg) ![License](https://img.shields.io/github/license/tu-usuario/tu-repo.svg)
-
 **Table of Contents**
 
 [TOCM]
@@ -47,5 +45,5 @@ Esta aplicación de e-commerce es una Single Page Application (SPA) que:
 H3: Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/tatobrotto/ReactBrotto
+cd ReactBrotto
