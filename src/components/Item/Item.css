@@ -24,6 +24,15 @@
   transition: transform 0.3s ease;
 }
 
+/* Ajusta la imagen dentro de la tarjeta */
+.card img {
+  max-width: 80%;     /* Ocupa el 80% del ancho interno de la tarjeta */
+  height: auto;       /* Mantiene la proporción */
+  object-fit: cover;  /* Recorta si excede el contenedor, útil para imágenes no proporcionadas */
+  border-radius: 0.5rem;
+}
+
+
 .card:hover {
   transform: scale(1.05);
 }

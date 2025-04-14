@@ -1,5 +1,3 @@
-
-
 // Navbar.jsx
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -9,7 +7,7 @@ function Navbar() {
   return (
     <header>
       <nav className="menu">
-        {}
+        {/* LOGO */}
         <Link to="/">
           <img
             src="./src/assets/logo.png"
@@ -18,6 +16,7 @@ function Navbar() {
           />
         </Link>
 
+        {/* CATEGORÍAS / OPCIONES */}
         <ul className="opciones">
           <li className="opciones-items">
             <Link to="/">Inicio</Link>
@@ -38,7 +37,11 @@ function Navbar() {
             <Link to="/contact">Contacto</Link>
           </li>
         </ul>
-        <CarWidget />
+
+        {/* Ícono de Carrito */}
+        <Link to="/cart">
+          <CarWidget />
+        </Link>
       </nav>
     </header>
   );

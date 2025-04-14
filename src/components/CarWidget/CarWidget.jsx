@@ -1,6 +1,11 @@
+// CarWidget.jsx
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext'; // ajusta la ruta a tu carpeta
 import './CarWidget.css';
 
 function CarWidget() {
+  const { totalItems } = useContext(CartContext);
+
   return (
     <div className="CarritoBtn">
       <img
@@ -8,7 +13,9 @@ function CarWidget() {
         alt="carrito de compras"
         className="carrito"
       />
-      <span className="infoCarrito">4</span>
+      {totalItems > 0 && (
+        <span className="infoCarrito">{totalItems}</span>
+      )}
     </div>
   );
 }

@@ -1,8 +1,10 @@
+// src/App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainter/ItemDetailContainer';
-
+import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout'; // <-- Importa tu componente Checkout
 
 function App() {
   return (
@@ -10,23 +12,20 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Ruta principal (muestra todos los productos) */}
         <Route path="/" element={<ItemListContainer />} />
-
-        {/* Ruta para mostrar productos filtrados por categoría */}
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
-
-        {/* Ruta para detalle de un producto particular */}
         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
 
-        {}
-        <Route path="/contact" element={<h2>Página de contacto (ejemplo)</h2>} />
+        <Route path="/cart" element={<Cart />} />
 
-        {/* Ruta 404 */}
+        {/* Agrega tu nueva ruta aquí */}
+        <Route path="/checkout" element={<Checkout />} />
+
+        {/* Ruta de error o fallback */}
         <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
